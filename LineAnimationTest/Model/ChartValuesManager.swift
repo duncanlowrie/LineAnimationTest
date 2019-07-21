@@ -16,21 +16,23 @@ class ChartValuesManager: BindableObject {
         
     var willChange = PublisherType()
     
-    var values: [Double]
-    var currentValueCount: Double
+    var lineDef: LineDef
     var maxValues: Int
     
     init(initialValues: [Double], maxValues: Int) {
         
-        self.values = initialValues
         self.maxValues = maxValues
-
-        self.currentValueCount = Double(self.values.count)
+       
+        var values = initialValues
         
         //add missing values...
         let lastValue = values.last ?? 0.0
         let blankValues = (values.count..<maxValues).map { _ in lastValue }
         values.append(contentsOf: blankValues)
+        
+        self.lineDef = LineDef(values: values,
+                               valueCount: Double(initialValues.count),
+                               color: .red)
         
         willChange.send()
         refresh()
@@ -43,13 +45,15 @@ class ChartValuesManager: BindableObject {
     private func loadNewValues() {
     
         //randomize a random number of values...
-        currentValueCount = Double(Int.random(in: 0...maxValues))
-        values = [Double].init(repeating: 0.0, count: Int(maxValues))
+        let valueCount = Double(Int.random(in: 0...maxValues))
+        var values = [Double].init(repeating: 0.0, count: Int(maxValues))
         
-        for i in 0..<Int(currentValueCount) {
+        for i in 0..<Int(valueCount) {
             values[i] = Double.random(in: 5...42)
         }
-                
+           
+        lineDef = LineDef(values: values, valueCount: valueCount, color: .red)
+        
         willChange.send()
     }
 

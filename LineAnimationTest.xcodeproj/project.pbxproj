@@ -19,6 +19,7 @@
 		0A77102322D868EE00F36637 /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A77102222D868EE00F36637 /* LineChart.swift */; };
 		0A77102522D86BB600F36637 /* ChartValuesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A77102422D86BB600F36637 /* ChartValuesManager.swift */; };
 		0ACCE59C22E3A224001BAD67 /* Array-Animatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACCE59B22E3A224001BAD67 /* Array-Animatable.swift */; };
+		0AE1E9E622E48E460064AE68 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE1E9E522E48E460064AE68 /* Line.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		0A77102222D868EE00F36637 /* LineChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChart.swift; sourceTree = "<group>"; };
 		0A77102422D86BB600F36637 /* ChartValuesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartValuesManager.swift; sourceTree = "<group>"; };
 		0ACCE59B22E3A224001BAD67 /* Array-Animatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Array-Animatable.swift"; path = "../../../../../../System/Volumes/Data/Users/duncanlowrie/Source/SwiftUI/LineAnimationTest/LineAnimationTest/Array-Animatable.swift"; sourceTree = "<group>"; };
+		0AE1E9E522E48E460064AE68 /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,15 +109,13 @@
 		0A770FF122D8676E00F36637 /* LineAnimationTest */ = {
 			isa = PBXGroup;
 			children = (
-				0A77102422D86BB600F36637 /* ChartValuesManager.swift */,
-				0A770FF622D8676E00F36637 /* ContentView.swift */,
-				0A77102222D868EE00F36637 /* LineChart.swift */,
+				0AE1E9E022E48DBF0064AE68 /* View */,
+				0AE1E9DF22E48DB00064AE68 /* Model */,
 				0A770FF222D8676E00F36637 /* AppDelegate.swift */,
 				0A770FF422D8676E00F36637 /* SceneDelegate.swift */,
 				0A770FF822D8677000F36637 /* Assets.xcassets */,
 				0A770FFD22D8677000F36637 /* LaunchScreen.storyboard */,
 				0A77100022D8677000F36637 /* Info.plist */,
-				0A1AC6B122DDB20900C50080 /* LineDef.swift */,
 				0A770FFA22D8677000F36637 /* Preview Content */,
 				0ACCE59B22E3A224001BAD67 /* Array-Animatable.swift */,
 			);
@@ -146,6 +146,25 @@
 				0A77101622D8677000F36637 /* Info.plist */,
 			);
 			path = LineAnimationTestUITests;
+			sourceTree = "<group>";
+		};
+		0AE1E9DF22E48DB00064AE68 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0A77102422D86BB600F36637 /* ChartValuesManager.swift */,
+				0A1AC6B122DDB20900C50080 /* LineDef.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0AE1E9E022E48DBF0064AE68 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0A770FF622D8676E00F36637 /* ContentView.swift */,
+				0A77102222D868EE00F36637 /* LineChart.swift */,
+				0AE1E9E522E48E460064AE68 /* Line.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,6 +303,7 @@
 				0A770FF322D8676E00F36637 /* AppDelegate.swift in Sources */,
 				0A77102522D86BB600F36637 /* ChartValuesManager.swift in Sources */,
 				0A770FF522D8676E00F36637 /* SceneDelegate.swift in Sources */,
+				0AE1E9E622E48E460064AE68 /* Line.swift in Sources */,
 				0A770FF722D8676E00F36637 /* ContentView.swift in Sources */,
 				0ACCE59C22E3A224001BAD67 /* Array-Animatable.swift in Sources */,
 			);

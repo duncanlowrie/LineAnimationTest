@@ -15,7 +15,7 @@ struct ContentView : View {
     var body: some View {
         VStack {
             
-            LineChart(chartValues: chartValuesManager.values, currentValueCount: chartValuesManager.currentValueCount)
+            LineChart(lineDefs: [chartValuesManager.lineDef])
                 .frame(height: 200.0)
 
             Button("Randomize!") {
