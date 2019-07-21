@@ -16,7 +16,11 @@ class ChartValuesManager: BindableObject {
         
     var willChange = PublisherType()
     
-    var lineDef: LineDef
+    var lineDef: LineDef {
+        didSet {
+            willChange.send()
+        }
+    }
     var maxValues: Int
     
     init(initialValues: [Double], maxValues: Int) {
@@ -34,7 +38,6 @@ class ChartValuesManager: BindableObject {
                                valueCount: Double(initialValues.count),
                                color: .red)
         
-        willChange.send()
         refresh()
     }
     
@@ -53,8 +56,6 @@ class ChartValuesManager: BindableObject {
         }
            
         lineDef = LineDef(values: values, valueCount: valueCount, color: .red)
-        
-        willChange.send()
     }
 
 }

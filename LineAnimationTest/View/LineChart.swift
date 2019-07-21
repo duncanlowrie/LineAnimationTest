@@ -15,14 +15,20 @@ struct LineChart : View {
     var body: some View {
         GeometryReader { geometry in
             ZStack {
-                ForEach(self.lineDefs) { lineDef in
-                    Line(lineDef: lineDef,
-                         maxWidth: geometry.size.width,
-                         maxHeight: geometry.size.height)
-                        .foregroundColor(lineDef.color)
-                        .drawingGroup()
-                        .animation(.easeInOut(duration: 0.5))
-                }
+//                ForEach(self.lineDefs) { lineDef in
+//                    Line(lineDef: lineDef,
+//                         maxWidth: geometry.size.width,
+//                         maxHeight: geometry.size.height)
+//                        .foregroundColor(lineDef.color)
+//                        .drawingGroup()
+//                        .animation(.easeInOut(duration: 0.5))
+//                }
+                Line(lineDef: self.lineDefs[0],
+                     maxWidth: geometry.size.width,
+                     maxHeight: geometry.size.height)
+                    .foregroundColor(self.lineDefs[0].color)
+                    .drawingGroup()
+                    .animation(.easeInOut(duration: 0.5))
             }
         }
     }
